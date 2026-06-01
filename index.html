@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropanas | Comunidad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin-bottom: 35px;
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo optimizado con filtro de sombra sutil para el logotipo blanco */
+        .brand-logo {
+            width: 75%;
+            max-width: 260px;
+            height: auto;
+            margin-bottom: 8px;
+            object-fit: contain;
+            filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.5));
+            pointer-events: none;
+        }
+
+        .username {
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        .links-container {
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1.5px solid rgba(239, 68, 68, 0.3);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .link-button:active {
+            transform: scale(0.98);
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+        }
+
+        /* Botón destacado prioritario de la Comunidad Dropanas */
+        .featured {
+            background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+            border: none;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+        }
+        
+        .featured:active {
+            background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img class="brand-logo" src="logoblanco.png.png" alt="Dropanas Logo">
+        <div class="username">@dropanas_ve</div>
+    </div>
+
+    <div class="links-container">
+        <a class="link-button featured" href="https://chat.whatsapp.com/LHYYjVMFED58E30UYfJjcK" target="_blank">
+            COMUNIDAD DROPANAS
+        </a>
+
+        <a class="link-button" href="https://dropanas.com/" target="_blank">
+            INICIO - DROPANAS
+        </a>
+
+        <a class="link-button" href="https://www.whatsapp.com/channel/0029Vb7id7CEFeXr4T8Ieb3w" target="_blank">
+            CANAL INFORMATIVO
+        </a>
+
+        <a class="link-button" href="https://www.instagram.com/dropanas_ve/" target="_blank">
+            INSTAGRAM
+        </a>
+
+        <a class="link-button" href="https://www.youtube.com/@Dropanas_ve" target="_blank">
+            YOUTUBE
+        </a>
+
+        <a class="link-button" href="https://www.tiktok.com/@dropanas_ve" target="_blank">
+            TIKTOK
+        </a>
+    </div>
+
+</body>
+</html>
