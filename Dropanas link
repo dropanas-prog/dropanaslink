@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropanas | Enlaces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            /* Fondo base oscuro profundo con degradado */
+            background: linear-gradient(135deg, #020617 0%, #0b1329 50%, #020617 100%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* --- ELEMENTOS FUTURISTAS DEL FONDO (CSS PURO) --- */
+        
+        /* 1. Cuadrícula Cibernética (Grid) */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(30, 41, 59, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 41, 59, 0.15) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: center;
+            mask-image: radial-gradient(circle, black 40%, transparent 85%);
+            -webkit-mask-image: radial-gradient(circle, black 40%, transparent 85%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* 2. Destellos de Neón Difusos (Glows) */
+        body::after {
+            content: "";
+            position: absolute;
+            top: -10%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .left-glow {
+            position: absolute;
+            bottom: 10%;
+            left: -20%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Envoltura para asegurar que el contenido quede por encima del fondo */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin-bottom: 35px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo optimizado con filtro de sombra sutil para el logotipo blanco */
+        .brand-logo {
+            width: 75%;
+            max-width: 260px;
+            height: auto;
+            margin-bottom: 8px;
+            object-fit: contain;
+            filter: drop-shadow(0px 2px 12px rgba(239, 68, 68, 0.3));
+            pointer-events: none;
+        }
+
+        .username {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #38bdf8; /* Tono cian tecnológico */
+            margin-top: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+        }
+
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2); /* Borde sutil cian */
+            border-radius: 12px; /* Bordes un poco más rectos/angulares para look tech */
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .link-button:active {
+            transform: scale(0.97);
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Botón destacado prioritario (Canal Informativo) */
+        .featured {
+            background: linear-gradient(135deg, #ef4444 0%, #7f1d1d 100%);
+            border: 1px solid rgba(239, 68, 68, 0.6);
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        .featured:active {
+            background: linear-gradient(135deg, #b91c1c 0%, #450a0a 100%);
+            border-color: #ef4444;
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="left-glow"></div>
+
+    <div class="content-wrapper">
+        
+        <div class="profile-container">
+            <img class="brand-logo" src="logoblanco.png" alt="Dropanas Logo">
+            <div class="username">@dropanas_ve</div>
+        </div>
+
+        <div class="links-container">
+            <a class="link-button featured" href="https://www.whatsapp.com/channel/0029Vb7id7CEFeXr4T8Ieb3w" target="_blank">
+                CANAL INFORMATIVO
+            </a>
+
+            <a class="link-button" href="https://dropanas.com/" target="_blank">
+                INICIO - DROPANAS
+            </a>
+
+            <a class="link-button" href="https://www.instagram.com/dropanas_ve/" target="_blank">
+                INSTAGRAM
+            </a>
+
+            <a class="link-button" href="https://www.youtube.com/@Dropanas_ve" target="_blank">
+                YOUTUBE
+            </a>
+
+            <a class="link-button" href="https://www.tiktok.com/@dropanas_ve" target="_blank">
+                TIKTOK
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
